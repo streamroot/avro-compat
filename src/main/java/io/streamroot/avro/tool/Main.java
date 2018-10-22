@@ -12,7 +12,8 @@ public class Main {
     private Main() {
         tools = new TreeMap<>();
         for (Tool tool : new Tool[]{
-                new CheckerTool()
+                new CheckerTool(),
+                new GenDefaultTool()
         }) {
             Tool prev = tools.put(tool.getName(), tool);
             if (prev != null) {

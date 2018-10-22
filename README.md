@@ -13,5 +13,5 @@ mvn clean package
 List and use available commands:
 
 ```sh
-java -jar target/avro-compat-1.0.jar
+java -jar target/avro-compat-1.1.jar
 ```
