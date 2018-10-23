@@ -14,6 +14,7 @@ import org.apache.avro.io.JsonEncoder;
 import java.io.BufferedOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,7 +47,7 @@ public class GenDefaultTool implements Tool {
             err.println("Usage: " +
                     "(--schema-file <file> | --schema <schema>) " +
                     "[--nested <path>]" +
-                    " --out (filename or '-' for stdout) " +
+                    " out (filename or '-' for stdout) " +
                     "[--no-pretty]");
             p.printHelpOn(err);
             return 1;
@@ -95,7 +96,7 @@ public class GenDefaultTool implements Tool {
 
     private static Schema nestedSchema(Schema schema, String path) {
         Schema current = schema;
-        String[] fields = path.split("\\.");
+        String[] fields = path.substring(1).split("\\.");
 
         int i = 0;
         for (; i<fields.length; i++) {
