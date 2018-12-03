@@ -121,7 +121,20 @@ public class GenDefaultTool implements Tool {
                     throw new RuntimeException("Not a union: " + next);
                 if (!(next.getTypes().size() == 2 && next.getTypes().get(0).getType().equals(Schema.Type.NULL)))
                     throw new RuntimeException("Invalid optional union: " + next);
-                current = next.getTypes().get(1);
+                Schema s = next.getTypes().get(1);
+                switch (s.getType()) {
+                    case RECORD:
+                        current = s;
+                        break;
+                    case MAP:
+                        current = s.getValueType();
+                        break;
+                    case ARRAY:
+                        current = s.getElementType();
+                        break;
+                    default:
+                        throw new RuntimeException("Invalid optional union of RECORD|MAP|ARRAY: " + next);
+                }
 
             } else {
                 Objects.requireNonNull(current.getField(fields[i]));
