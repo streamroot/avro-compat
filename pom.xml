@@ -6,13 +6,13 @@
     <groupId>io.streamroot</groupId>
     <artifactId>avro-compat</artifactId>
     <packaging>jar</packaging>
-    <version>1.3</version>
+    <version>1.4</version>
     <name>avro-compat</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Core dependencies -->
-        <avro.version>1.9.0</avro.version>
+        <avro.version>1.9.1</avro.version>
         <compat.version>2.2.0</compat.version>
         <jopt.version>5.0.3</jopt.version>
         <!-- Test dependencies -->
