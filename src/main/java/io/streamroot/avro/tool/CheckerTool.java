@@ -6,7 +6,7 @@ import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import org.apache.avro.Schema;
-import patched.org.apache.avro.SchemaCompatibility;
+import org.apache.avro.SchemaCompatibility;
 
 import java.io.InputStream;
 import java.io.PrintStream;
