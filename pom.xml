@@ -17,7 +17,7 @@
         <jopt.version>5.0.3</jopt.version>
         <!-- Test dependencies -->
         <sl4j.version>1.7.25</sl4j.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <!-- Maven plugins -->
         <assembly-plugin.version>3.1.0</assembly-plugin.version>
         <compiler-plugin.version>3.7.0</compiler-plugin.version>
